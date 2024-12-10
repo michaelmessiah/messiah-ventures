@@ -4,8 +4,133 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - Messiah Ventures</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        h1, h2, p {
+            margin: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #333;
+            color: white;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links li {
+            margin: 0;
+        }
+
+        .nav-links a {
+            color: white;
+            font-weight: 600;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-links a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .contact-button {
+            background-color: orange;
+            color: black;
+            font-weight: 700;
+        }
+
+        .contact-button:hover {
+            background-color: darkorange;
+        }
+
+        /* About Banner */
+        .about-banner {
+            background: url('about-banner.jpg') no-repeat center center/cover;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .about-banner .banner-content h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .about-banner .banner-content p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        /* About Content */
+        .about-content {
+            padding: 50px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .content-block {
+            margin-bottom: 40px;
+            text-align: left;
+        }
+
+        .content-block h2 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .content-block p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        /* Icon Style */
+        .icon {
+            font-size: 1.5rem;
+            color: orange;
+            vertical-align: middle;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            font-size: 0.9em;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -16,7 +141,7 @@
                 <li><a href="about.html" class="active">About</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="work.html">Work</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html" class="contact-button">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -28,19 +153,25 @@
     </section>
     <main>
         <section class="about-content">
-            <h2>Who We Are</h2>
-            <p>
-                Messiah Ventures is dedicated to creating scalable, innovative solutions that meet the challenges of a modern, fast-paced world. 
-                Our mission is to empower businesses and individuals with tools and strategies that drive success.
-            </p>
-            <h2>Our Vision</h2>
-            <p>
-                We aim to be at the forefront of innovation, delivering cutting-edge solutions while maintaining a commitment to sustainability and positive social impact.
-            </p>
-            <h2>Our Team</h2>
-            <p>
-                Behind Messiah Ventures is a team of passionate, skilled professionals dedicated to excellence and collaboration.
-            </p>
+            <div class="content-block">
+                <h2><i class="icon">🌟</i> Who We Are</h2>
+                <p>
+                    Messiah Ventures is dedicated to creating scalable, innovative solutions that meet the challenges of a modern, fast-paced world.
+                    Our mission is to empower businesses and individuals with tools and strategies that drive success.
+                </p>
+            </div>
+            <div class="content-block">
+                <h2><i class="icon">🎯</i> Our Vision</h2>
+                <p>
+                    We aim to be at the forefront of innovation, delivering cutting-edge solutions while maintaining a commitment to sustainability and positive social impact.
+                </p>
+            </div>
+            <div class="content-block">
+                <h2><i class="icon">🤝</i> Our Team</h2>
+                <p>
+                    Behind Messiah Ventures is a team of passionate, skilled professionals dedicated to excellence and collaboration.
+                </p>
+            </div>
         </section>
     </main>
     <footer>
