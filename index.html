@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,39 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Messiah Ventures</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Welcome to Messiah Ventures</h1>
-        <p>Innovating for a better tomorrow.</p>
-        <a href="#contact" class="cta-button">Contact Us</a>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Messiah Ventures</h1>
+            <p>Innovating for a better tomorrow.</p>
+            <a href="#contact" class="btn">Contact Us</a>
+        </div>
     </header>
     <main>
-        <section id="about">
+        <section id="about" class="section">
             <h2>About Us</h2>
             <p>Messiah Ventures is dedicated to creating scalable solutions for a modern world.</p>
         </section>
-        <section id="services">
+        <section id="services" class="section">
             <h2>Our Services</h2>
-            <div class="service-item">
-                <h3>Service 1</h3>
-                <p>Description of Service 1.</p>
-            </div>
-            <div class="service-item">
-                <h3>Service 2</h3>
-                <p>Description of Service 2.</p>
+            <div class="services-container">
+                <div class="service-card">
+                    <h3>Service 1</h3>
+                    <p>We offer innovative solutions to help businesses grow.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Service 2</h3>
+                    <p>Custom solutions tailored to your business needs.</p>
+                </div>
             </div>
         </section>
-        <section id="contact">
+        <section id="contact" class="section">
             <h2>Contact Us</h2>
-            <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit">Send</button>
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send</button>
             </form>
         </section>
     </main>
@@ -47,3 +57,4 @@
     </footer>
 </body>
 </html>
+
