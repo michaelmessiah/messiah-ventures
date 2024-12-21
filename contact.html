@@ -104,24 +104,69 @@
         .contact-button:hover {
             background-color: darkorange;
         }
-    </style>
+    
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #333;
+    color: white;
+    position: relative; /* Ensure it stays on top */
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-right: auto; /* Push the logo to the left */
+}
+
+/* Hamburger Button */
+.hamburger {
+    display: none; /* Hidden on desktop */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Navbar Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-direction: row; /* Default horizontal layout for desktop */
+}
+
+/* Mobile Menu Styling */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hidden initially on mobile */
+        flex-direction: column; /* Stack links vertically for mobile */
+        gap: 10px;
+        background-color: #333;
+        position: absolute;
+        top: 60px; /* Below the navbar */
+        left: 0;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .nav-links.show {
+        display: flex; /* Show links when toggled */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger button on mobile */
+    }
+}
+
+</style>
 </head>
 <body>
-    
-<div class="navbar">
-    <h1 class="logo">Messiah Ventures</h1>
-    <!-- Hamburger Menu Button -->
-    <button class="hamburger" onclick="toggleMenu()">☰</button>
-    <!-- Navbar Links -->
-    
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="crypto.html">Crypto</a></li>
-        <li><a href="contact.html" class="contact-button">Contact</a></li>
-    
-</div>
-
+    <div class="navbar">
         <h1>Messiah Ventures</h1>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
@@ -140,21 +185,5 @@
             </p>
         </p>
     </div>
-
-<script>
-    function toggleMenu() {
-        const navLinks = document.querySelector('.nav-links');
-        navLinks.classList.toggle('show');
-    }
-
-    // Close the menu when a link is clicked
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-            const navLinks = document.querySelector('.nav-links');
-            navLinks.classList.remove('show'); // Remove 'show' class
-        });
-    });
-</script>
-
 </body>
 </html>
