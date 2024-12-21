@@ -6,7 +6,8 @@
     <title>Messiah Ventures</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>/* General Styles */
+    <style>
+        /* General Styles */
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
@@ -28,7 +29,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 50px;
+            padding: 15px 50px;
             background-color: #333;
             color: white;
         }
@@ -116,66 +117,76 @@
             background: darkorange;
         }
         
-        
-        
-/* Responsive Design with Media Queries */
-@media (max-width: 1024px) {
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-    .service-box {
-        flex: 1 1 calc(50% - 20px);
-        max-width: calc(50% - 20px);
-    }
-}
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
 
-@media (max-width: 768px) {
-    .hero {
-        height: 60vh;
-    }
-    .hero-content h1 {
-        font-size: 1.8rem;
-    }
-    .service-box {
-        flex: 1 1 100%;
-        max-width: 100%;
-    }
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px;
-    }
-    .nav-links {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                gap: 10px;
+                background-color: #333;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                padding: 10px;
+            }
 
-</style>
+            .nav-links.show {
+                display: flex;
+            }
+
+            .hamburger {
+                display: block;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">MESSIAH VENTURES</div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="crypto.html">crypto</a></li>
-                <li><a href="contact.html" class="contact-button">Contact</a></li>
 
-            </ul>
-        </nav>
-    </header>
-    <section id="home" class="hero">
-        <div class="hero-overlay">
-            <div class="hero-content">
-                <h1>Messiah Ventures</h1>
-                <p>Showcasing Business & Investment Portfolio</p>
-                <a href="#services" class="btn">View Services</a>
-            </div>
-        </div>
-    </section>
+<div class="navbar">
+    <h1 class="logo">Messiah Ventures</h1>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="crypto.html">Crypto</a></li>
+        <li><a href="contact.html" class="contact-button">Contact</a></li>
+    </ul>
+</div>
+
+<section id="home" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>Messiah Ventures</h1>
+        <p>Showcasing Business & Investment Portfolio</p>
+        <a href="#services" class="btn">View Services</a>
+    </div>
+</section>
+
+<script>
+    function toggleMenu() {
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.classList.toggle('show');
+    }
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.remove('show');
+        });
+    });
+</script>
+
 </body>
 </html>
