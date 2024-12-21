@@ -126,39 +126,7 @@
             background-color: darkorange;
         }
     
-/* Responsive Design with Media Queries */
-@media (max-width: 1024px) {
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-    .service-box {
-        flex: 1 1 calc(50% - 20px);
-        max-width: calc(50% - 20px);
-    }
-}
-
-@media (max-width: 768px) {
-    .hero {
-        height: 60vh;
-    }
-    .hero-content h1 {
-        font-size: 1.8rem;
-    }
-    .service-box {
-        flex: 1 1 100%;
-        max-width: 100%;
-    }
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px;
-    }
-    .nav-links {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
-        /* Navbar General Styles */
+/* Navbar General Styles */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -166,14 +134,12 @@
     padding: 15px 20px;
     background-color: #333;
     color: white;
-    flex-wrap: wrap; /* Allow wrapping for small screens */
 }
 
 .nav-links {
     list-style: none;
     display: flex;
     gap: 15px;
-    flex-wrap: wrap; /* Wrap links for smaller screens */
     margin: 0;
     padding: 0;
 }
@@ -195,40 +161,63 @@
     background-color: orange;
     color: black;
     font-weight: 700;
-    padding: 10px 15px;
-    border-radius: 5px;
 }
 
 .contact-button:hover {
     background-color: darkorange;
 }
 
-/* Responsive Navbar */
+/* Hamburger Button */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
-    .navbar {
-        flex-direction: column; /* Stack navbar items vertically */
-        align-items: flex-start; /* Align links to the left */
-        padding: 10px;
+    .hamburger {
+        display: block; /* Show hamburger menu on mobile */
     }
 
     .nav-links {
+        display: none; /* Hide links initially */
         flex-direction: column; /* Stack links vertically */
-        width: 100%; /* Take full width */
-    }
-
-    .nav-links a {
-        display: block; /* Ensure links are block-level */
-        width: 100%; /* Make them stretch across the navbar */
-        text-align: left; /* Align text to the left */
+        gap: 10px;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
         padding: 10px;
     }
-}
 
+    .nav-links.show {
+        display: flex; /* Show links when toggled */
+    }
+}
 
 </style>
 </head>
 <body>
-    <div class="navbar">
+    
+<div class="navbar">
+    <h1 class="logo">Messiah Ventures</h1>
+    <!-- Hamburger Menu Button -->
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <!-- Navbar Links -->
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="crypto.html">Crypto</a></li>
+        <li><a href="contact.html" class="contact-button">Contact</a></li>
+    </ul>
+</div>
+
         <h1>Messiah Ventures</h1>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
@@ -270,5 +259,13 @@
             </div>
         </div>
     </div>
+
+<script>
+    function toggleMenu() {
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.classList.toggle('show');
+    }
+</script>
+
 </body>
 </html>
