@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Messiah Ventures</title>
+    <title>About Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         /* General Styles */
         body {
@@ -11,7 +12,6 @@
             margin: 0;
             padding: 0;
             color: #333;
-            background-color: #f9f9f9;
         }
 
         h1, h2, p {
@@ -20,7 +20,11 @@
 
         a {
             text-decoration: none;
-            color: inherit;
+            color: orange;
+        }
+
+        a:hover {
+            color: darkorange;
         }
 
         /* Navbar */
@@ -53,129 +57,118 @@
 
         .nav-links a:hover {
             background-color: rgba(255, 255, 255, 0.2);
+            color: white;
         }
 
+        .about-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .about-container h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: orange;
+        }
+
+        .about-section {
+            margin: 30px 0;
+            text-align: left;
+        }
+
+        .about-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .about-section p {
+            font-size: 1rem;
+            line-height: 1.6rem;
+            margin-bottom: 15px;
+        }
+
+        .about-values {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .value-box {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            flex: 1 1 300px;
+            max-width: 300px;
+            text-align: center;
+        }
+
+        .value-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: orange;
+        }
+
+        .value-box p {
+            font-size: 1rem;
+        }
         .contact-button {
             background-color: orange;
             color: black;
             font-weight: 700;
         }
-
+        
         .contact-button:hover {
             background-color: darkorange;
-        }
-
-        /* About Banner */
-        .about-banner {
-            background: url('crypto.jpeg') no-repeat center center/cover;
-            height: 50vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .about-banner .banner-content h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-
-        .about-banner .banner-content p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-
-        /* About Content */
-        .about-content {
-            padding: 50px 20px;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .content-block {
-            margin-bottom: 40px;
-            text-align: left;
-        }
-
-        .content-block h2 {
-            font-size: 2rem;
-            color: #333;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .content-block p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: #555;
-        }
-
-        /* Icon Style */
-        .icon {
-            font-size: 1.5rem;
-            color: orange;
-            vertical-align: middle;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #333;
-            color: white;
-            font-size: 0.9em;
         }
     </style>
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">MESSIAH VENTURES</div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="active">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="work.html">Work</a></li>
-                <li><a href="contact.html" class="contact-button">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section class="about-banner">
-        <div class="banner-content">
-            <h1>About Us</h1>
-            <p>Learn more about Messiah Ventures and our journey.</p>
+    <div class="navbar">
+        <h1>Messiah Ventures</h1>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="crypto.html">crypto</a></li>
+            <li><a href="contact.html" class="contact-button">Contact</a></li>
+        </ul>
+    </div>
+    <div class="about-container">
+        <h1>About Messiah Ventures</h1>
+        <div class="about-section">
+            <h2>Who We Are</h2>
+            <p>Messiah Ventures is a forward-thinking business and investment portfolio company dedicated to empowering individuals and businesses to achieve their financial goals. With a focus on innovation, professionalism, and integrity, we aim to build a legacy of excellence and trust.</p>
         </div>
-    </section>
-    <main>
-        <section class="about-content">
-            <div class="content-block">
-                <h2><i class="icon">🌟</i> Who We Are</h2>
-                <p>
-                    Messiah Ventures is dedicated to creating scalable, innovative solutions that meet the challenges of a modern, fast-paced world.
-                    Our mission is to empower businesses and individuals with tools and strategies that drive success.
-                </p>
+        <div class="about-section">
+            <h2>Our Mission</h2>
+            <p>To create sustainable value for our clients, partners, and stakeholders through innovative solutions, strategic investments, and a commitment to excellence.</p>
+        </div>
+        <div class="about-section">
+            <h2>Our Vision</h2>
+            <p>To be a global leader in business and investment services, shaping the future of entrepreneurship and financial freedom.</p>
+        </div>
+        <div class="about-section">
+            <h2>Our Values</h2>
+            <div class="about-values">
+                <div class="value-box">
+                    <h3>Innovation</h3>
+                    <p>We embrace creativity and forward-thinking to deliver cutting-edge solutions.</p>
+                </div>
+                <div class="value-box">
+                    <h3>Integrity</h3>
+                    <p>We operate with transparency, honesty, and accountability in all our endeavors.</p>
+                </div>
+                <div class="value-box">
+                    <h3>Excellence</h3>
+                    <p>We strive for the highest standards of professionalism and quality in everything we do.</p>
+                </div>
             </div>
-            <div class="content-block">
-                <h2><i class="icon">🎯</i> Our Vision</h2>
-                <p>
-                    We aim to be at the forefront of innovation, delivering cutting-edge solutions while maintaining a commitment to sustainability and positive social impact.
-                </p>
-            </div>
-            <div class="content-block">
-                <h2><i class="icon">🤝</i> Our Team</h2>
-                <p>
-                    Behind Messiah Ventures is a team of passionate, skilled professionals dedicated to excellence and collaboration.
-                </p>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 Messiah Ventures. All rights reserved.</p>
-    </footer>
+        </div>
+    </div>
 </body>
 </html>
