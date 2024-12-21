@@ -33,6 +33,11 @@
             color: white;
         }
 
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
         .nav-links {
             list-style: none;
             display: flex;
@@ -95,110 +100,33 @@
         .contact-details a:hover {
             color: darkorange;
         }
-        .contact-button {
-            background-color: orange;
-            color: black;
-            font-weight: 700;
+
+        /* Hamburger Button */
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
         }
-        
-        .contact-button:hover {
-            background-color: darkorange;
-        }
-    
-/* Navbar */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-    background-color: #333;
-    color: white;
-}
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-right: auto;
-}
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background-color: #333;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                padding: 10px;
+            }
 
-/* Hamburger Button */
-.hamburger {
-    display: none; /* Hidden by default */
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1.5rem;
-    cursor: pointer;
-}
+            .nav-links.show {
+                display: flex;
+            }
 
-/* Navbar Links */
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    flex-direction: row; /* Default horizontal layout for desktop */
-}
-
-/* Mobile Menu Styling */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none; /* Hidden initially on mobile */
-        flex-direction: column; /* Stack links vertically for mobile */
-        gap: 10px;
-        background-color: #333;
-        position: absolute;
-        top: 60px; /* Below the navbar */
-        left: 0;
-        width: 100%;
-        padding: 10px;
-    }
-
-    .nav-links.show {
-        display: flex; /* Show links when toggled */
-    }
-
-    .hamburger {
-        display: block; /* Show hamburger button on mobile */
-    }
-}
-
-/* JavaScript to Toggle Menu */
-<script>
-    function toggleMenu() {
-        const navLinks = document.querySelector('.nav-links');
-        navLinks.classList.toggle('show');
-    }
-
-    // Close the menu when a link is clicked
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-            const navLinks = document.querySelector('.nav-links');
-            navLinks.classList.remove('show'); // Remove 'show' class
-        });
-    });
-</script>
-
-</style>
-</head>
-<body>
-    <div class="navbar">
-        <h1>Messiah Ventures</h1>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="crypto.html">crypto</a></li>
-            <li><a href="contact.html" class="contact-button">Contact</a></li>
-        </ul>
-    </div>
-    <div class="contact-container">
-        <h1>Contact Us</h1>
-        <p class="contact-details">
-            <p class="contact-details">
-                <strong>Email:</strong> <a href="mailto:messiahventures.uk@gmail.com">messiahventures.uk@gmail.com</a><br>
-                <strong>X:</strong> <a href="https://x.com/mic_mes18" target="_blank">@mic_mes18</a><br>
-            </p>
-        </p>
-    </div>
-</body>
-</html>
+            .hamburger {
+                display: block;
+  
