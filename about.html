@@ -37,6 +37,11 @@
             color: white;
         }
 
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
         .nav-links {
             list-style: none;
             display: flex;
@@ -57,9 +62,19 @@
 
         .nav-links a:hover {
             background-color: rgba(255, 255, 255, 0.2);
-            color: white;
         }
 
+        .contact-button {
+            background-color: orange;
+            color: black;
+            font-weight: 700;
+        }
+
+        .contact-button:hover {
+            background-color: darkorange;
+        }
+
+        /* About Section */
         .about-container {
             max-width: 1200px;
             margin: 50px auto;
@@ -116,14 +131,36 @@
         .value-box p {
             font-size: 1rem;
         }
-        .contact-button {
-            background-color: orange;
-            color: black;
-            font-weight: 700;
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
         }
-        
-        .contact-button:hover {
-            background-color: darkorange;
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background-color: #333;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                padding: 10px;
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
         }
     </style>
 </head>
@@ -140,6 +177,40 @@
         <li><a href="contact.html" class="contact-button">Contact</a></li>
     </ul>
 </div>
+
+<div class="about-container">
+    <h1>About Messiah Ventures</h1>
+    <div class="about-section">
+        <h2>Who We Are</h2>
+        <p>Messiah Ventures is a forward-thinking business and investment portfolio company dedicated to empowering individuals and businesses to achieve their financial goals. With a focus on innovation, professionalism, and integrity, we aim to build a legacy of excellence and trust.</p>
+    </div>
+    <div class="about-section">
+        <h2>Our Mission</h2>
+        <p>To create sustainable value for our clients, partners, and stakeholders through innovative solutions, strategic investments, and a commitment to excellence.</p>
+    </div>
+    <div class="about-section">
+        <h2>Our Vision</h2>
+        <p>To be a global leader in business and investment services, shaping the future of entrepreneurship and financial freedom.</p>
+    </div>
+    <div class="about-section">
+        <h2>Our Values</h2>
+        <div class="about-values">
+            <div class="value-box">
+                <h3>Innovation</h3>
+                <p>We embrace creativity and forward-thinking to deliver cutting-edge solutions.</p>
+            </div>
+            <div class="value-box">
+                <h3>Integrity</h3>
+                <p>We operate with transparency, honesty, and accountability in all our endeavors.</p>
+            </div>
+            <div class="value-box">
+                <h3>Excellence</h3>
+                <p>We strive for the highest standards of professionalism and quality in everything we do.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script>
     function toggleMenu() {
         const navLinks = document.querySelector('.nav-links');
@@ -154,47 +225,5 @@
     });
 </script>
 
-    <div class="navbar">
-        <h1>Messiah Ventures</h1>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="crypto.html">crypto</a></li>
-            <li><a href="contact.html" class="contact-button">Contact</a></li>
-        </ul>
-    </div>
-    <div class="about-container">
-        <h1>About Messiah Ventures</h1>
-        <div class="about-section">
-            <h2>Who We Are</h2>
-            <p>Messiah Ventures is a forward-thinking business and investment portfolio company dedicated to empowering individuals and businesses to achieve their financial goals. With a focus on innovation, professionalism, and integrity, we aim to build a legacy of excellence and trust.</p>
-        </div>
-        <div class="about-section">
-            <h2>Our Mission</h2>
-            <p>To create sustainable value for our clients, partners, and stakeholders through innovative solutions, strategic investments, and a commitment to excellence.</p>
-        </div>
-        <div class="about-section">
-            <h2>Our Vision</h2>
-            <p>To be a global leader in business and investment services, shaping the future of entrepreneurship and financial freedom.</p>
-        </div>
-        <div class="about-section">
-            <h2>Our Values</h2>
-            <div class="about-values">
-                <div class="value-box">
-                    <h3>Innovation</h3>
-                    <p>We embrace creativity and forward-thinking to deliver cutting-edge solutions.</p>
-                </div>
-                <div class="value-box">
-                    <h3>Integrity</h3>
-                    <p>We operate with transparency, honesty, and accountability in all our endeavors.</p>
-                </div>
-                <div class="value-box">
-                    <h3>Excellence</h3>
-                    <p>We strive for the highest standards of professionalism and quality in everything we do.</p>
-                </div>
-            </div>
-        </div>
-    </div>
 </body>
 </html>
