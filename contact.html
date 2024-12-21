@@ -129,4 +129,42 @@
 
             .hamburger {
                 display: block;
-  
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h1 class="logo">Messiah Ventures</h1>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="crypto.html">Crypto</a></li>
+            <li><a href="contact.html" class="contact-button">Contact</a></li>
+        </ul>
+    </div>
+    <div class="contact-container">
+        <h1>Contact Us</h1>
+        <div class="contact-details">
+            <strong>Email:</strong> <a href="mailto:messiahventures.uk@gmail.com">messiahventures.uk@gmail.com</a><br>
+            <strong>X:</strong> <a href="https://x.com/mic_mes18" target="_blank">@mic_mes18</a>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('show');
+        }
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                const navLinks = document.querySelector('.nav-links');
+                navLinks.classList.remove('show');
+            });
+        });
+    </script>
+</body>
+</html>
