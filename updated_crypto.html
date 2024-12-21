@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        h1, h2, p {
+            margin: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: orange;
+        }
+
+        a:hover {
+            color: darkorange;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #333;
+            color: white;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links li {
+            margin: 0;
+        }
+
+        .nav-links a {
+            color: white;
+            font-weight: 600;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-links a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .crypto-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .crypto-container h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: orange;
+        }
+
+        .crypto-section {
+            margin: 30px 0;
+            text-align: left;
+        }
+
+        .crypto-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .crypto-section p {
+            font-size: 1rem;
+            line-height: 1.6rem;
+            margin-bottom: 15px;
+        }
+
+        .crypto-section ul {
+            list-style: disc;
+            margin-left: 20px;
+        }
+
+        .crypto-section ul li {
+            margin-bottom: 10px;
+        }
+        .contact-button {
+            background-color: orange;
+            color: black;
+            font-weight: 700;
+        }
+        
+        .contact-button:hover {
+            background-color: darkorange;
+        }
+        
+    
+/* Responsive Design with Media Queries */
+@media (max-width: 1024px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .service-box {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: 60vh;
+    }
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+    .service-box {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+</style>
+</head>
+<body>
+    <div class="navbar">
+        <h1>Messiah Ventures</h1>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="crypto.html">crypto</a></li>
+            <li><a href="contact.html" class="contact-button">Contact</a></li>
+        </ul>
+    </div>
+    <div class="crypto-container">
+        <h1>Learn About Crypto</h1>
+        <div class="crypto-section">
+            <h2>What is Cryptocurrency?</h2>
+            <p>Cryptocurrency is a digital or virtual currency that uses cryptography for security. It operates independently of a central bank and allows peer-to-peer transactions on decentralized networks like blockchain.</p>
+        </div>
+        <div class="crypto-section">
+            <h2>Popular Cryptocurrencies</h2>
+            <ul>
+                <li><strong>Bitcoin (BTC):</strong> The first and most widely recognized cryptocurrency.</li>
+                <li><strong>Ethereum (ETH):</strong> Known for its smart contract capabilities.</li>
+                <li><strong>Solana (SOL):</strong> A high-performance blockchain supporting decentralized apps.</li>
+                <li><strong>Avalanche (AVAX):</strong> A scalable blockchain platform for decentralized finance.</li>
+            </ul>
+        </div>
+        <div class="crypto-section">
+            <h2>Getting Started</h2>
+            <p>To start investing in cryptocurrency, follow these steps:</p>
+            <ul>
+                <li>Create a wallet on a secure platform like <a href="https://trezor.io" target="_blank">Trezor</a> or <a href="https://www.coinbase.com" target="_blank">Coinbase</a>.</li>
+                <li>Research and choose cryptocurrencies that align with your investment goals.</li>
+                <li>Monitor the market trends using tools like <a href="https://www.coinmarketcap.com" target="_blank">CoinMarketCap</a>.</li>
+            </ul>
+        </div>
+        <div class="crypto-section">
+            <h2>Resources</h2>
+            <p>Explore these resources to learn more about cryptocurrency:</p>
+            <ul>
+                <li><a href="https://www.investopedia.com/terms/c/cryptocurrency.asp" target="_blank">Investopedia: Cryptocurrency Guide</a></li>
+                <li><a href="https://ethereum.org/en/" target="_blank">Ethereum Official Website</a></li>
+                <li><a href="https://bitcoin.org" target="_blank">Bitcoin Official Website</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
