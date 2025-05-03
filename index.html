@@ -158,6 +158,56 @@
                 display: flex;
             }
         }
+
+
+  /* Basic styling for the hero section */
+  #hero {
+    text-align: center; /* Center the text content */
+    padding: 100px 20px; /* Add some padding around the content */
+  }
+
+  #hero h2 {
+    font-size: 2.5em; /* Adjust as needed */
+    margin-bottom: 20px;
+  }
+
+  #hero p {
+    font-size: 1.1em; /* Adjust as needed */
+    line-height: 1.6; /* Improve readability */
+    margin: 0 auto 30px auto; /* Center the paragraph and add bottom margin */
+    max-width: 600px; /* Prevent the text from stretching too wide on large screens */
+  }
+
+  #hero .button {
+    display: inline-block; /* Allows for padding and margins */
+    padding: 15px 30px;
+    background-color: #007bff; /* Example button color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+
+  /* Mobile-specific adjustments using a media query */
+  @media (max-width: 768px) {
+    #hero {
+      padding: 80px 15px; /* Slightly reduce padding on mobile */
+    }
+
+    #hero h2 {
+      font-size: 2em; /* Adjust font size for mobile */
+    }
+
+    #hero p {
+      font-size: 1em; /* Adjust font size for mobile */
+      max-width: 95%; /* Allow the paragraph to take up more width on smaller screens */
+    }
+
+    #hero .button {
+      padding: 12px 25px; /* Adjust button padding for mobile */
+      font-size: 0.9em;
+    }
+  }
     </style>
 </head>
 
