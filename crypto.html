@@ -37,11 +37,6 @@
             color: white;
         }
 
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-        }
-
         .nav-links {
             list-style: none;
             display: flex;
@@ -64,17 +59,6 @@
             background-color: rgba(255, 255, 255, 0.2);
         }
 
-        .contact-button {
-            background-color: orange;
-            color: black;
-            font-weight: 700;
-        }
-
-        .contact-button:hover {
-            background-color: darkorange;
-        }
-
-        /* Crypto Content */
         .crypto-container {
             max-width: 1200px;
             margin: 50px auto;
@@ -113,100 +97,79 @@
         .crypto-section ul li {
             margin-bottom: 10px;
         }
-
-        /* Responsive Hamburger Menu */
-        .hamburger {
-            display: none;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
+        .contact-button {
+            background-color: orange;
+            color: black;
+            font-weight: 700;
         }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                background-color: #333;
-                position: absolute;
-                top: 60px;
-                left: 0;
-                width: 100%;
-                padding: 10px;
-            }
-
-            .nav-links.show {
-                display: flex;
-            }
-
-            .hamburger {
-                display: block;
-            }
+        
+        .contact-button:hover {
+            background-color: darkorange;
         }
-    </style>
+        
+    
+/* Responsive Design with Media Queries */
+@media (max-width: 1024px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .service-box {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: 60vh;
+    }
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+    .service-box {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+</style>
 </head>
 <body>
-
-<div class="navbar">
-    <h1 class="logo">Messiah Ventures</h1>
-    <button class="hamburger" onclick="toggleMenu()">☰</button>
-    <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="crypto.html">Crypto</a></li>
-        <li><a href="contact.html" class="contact-button">Contact</a></li>
-    </ul>
-</div>
-
-<div class="crypto-container">
-    <h1>Learn About Crypto</h1>
-    <div class="crypto-section">
-        <h2>What is Cryptocurrency?</h2>
-        <p>Cryptocurrency is a digital or virtual currency that uses cryptography for security. It operates independently of a central bank and allows peer-to-peer transactions on decentralized networks like blockchain.</p>
-    </div>
-    <div class="crypto-section">
-        <h2>Popular Cryptocurrencies</h2>
-        <ul>
-            <li><strong>Bitcoin (BTC):</strong> The first and most widely recognized cryptocurrency.</li>
-            <li><strong>Ethereum (ETH):</strong> Known for its smart contract capabilities.</li>
-            <li><strong>Solana (SOL):</strong> A high-performance blockchain supporting decentralized apps.</li>
-            <li><strong>Avalanche (AVAX):</strong> A scalable blockchain platform for decentralized finance.</li>
+    <div class="navbar">
+        <h1>Messiah Ventures</h1>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="crypto.html">crypto</a></li>
+            <li><a href="contact.html" class="contact-button">Contact</a></li>
         </ul>
     </div>
-    <div class="crypto-section">
-        <h2>Getting Started</h2>
-        <p>To start investing in cryptocurrency, follow these steps:</p>
-        <ul>
-            <li>Create a wallet on a secure platform like <a href="https://trezor.io" target="_blank">Trezor</a> or <a href="https://www.coinbase.com" target="_blank">Coinbase</a>.</li>
-            <li>Research and choose cryptocurrencies that align with your investment goals.</li>
-            <li>Monitor the market trends using tools like <a href="https://www.coinmarketcap.com" target="_blank">CoinMarketCap</a>.</li>
-        </ul>
+    <div class="crypto-container">
+     
+        <h1>Our take on Cryptocurrencies</h1>
+        <div class="crypto-section">
+            <h2>Cryptocurrency?</h2>
+            <p>To us cryptocurrency represents a dynamic and evolving asset class within our investment portfolio. We see it as a space with significant potential for growth and diversification within our business structure.</p>
+        </div>
+        <div class="crypto-section">
+            <h2>Our Cryptocurrencies</h2>
+            <P>To discuss our cryptocurrency investment portfolio in more detail, please contact us directly via email or message. Due to the dynamic nature of this market, we prefer to share specifics through direct communication. </P>
+        </div>
+        <div class="crypto-section">
+            <h2>Getting Started</h2>
+            <p>Interested in learning more about our cryptocurrency investment strategies? We'd be happy to share our perspective and information with you directly. Please reach out to us via email or message to start a conversation.</p>
+        </div>
+       
     </div>
-    <div class="crypto-section">
-        <h2>Resources</h2>
-        <p>Explore these resources to learn more about cryptocurrency:</p>
-        <ul>
-            <li><a href="https://www.investopedia.com/terms/c/cryptocurrency.asp" target="_blank">Investopedia: Cryptocurrency Guide</a></li>
-            <li><a href="https://ethereum.org/en/" target="_blank">Ethereum Official Website</a></li>
-            <li><a href="https://bitcoin.org" target="_blank">Bitcoin Official Website</a></li>
-        </ul>
-    </div>
-</div>
-
-<script>
-    function toggleMenu() {
-        const navLinks = document.querySelector('.nav-links');
-        navLinks.classList.toggle('show');
-    }
-
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-            const navLinks = document.querySelector('.nav-links');
-            navLinks.classList.remove('show');
-        });
-    });
-</script>
 </body>
 </html>
