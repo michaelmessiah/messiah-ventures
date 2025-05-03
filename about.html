@@ -37,11 +37,6 @@
             color: white;
         }
 
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-        }
-
         .nav-links {
             list-style: none;
             display: flex;
@@ -62,19 +57,9 @@
 
         .nav-links a:hover {
             background-color: rgba(255, 255, 255, 0.2);
+            color: white;
         }
 
-        .contact-button {
-            background-color: orange;
-            color: black;
-            font-weight: 700;
-        }
-
-        .contact-button:hover {
-            background-color: darkorange;
-        }
-
-        /* About Section */
         .about-container {
             max-width: 1200px;
             margin: 50px auto;
@@ -131,99 +116,93 @@
         .value-box p {
             font-size: 1rem;
         }
-
-        /* Hamburger Menu */
-        .hamburger {
-            display: none;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
+        .contact-button {
+            background-color: orange;
+            color: black;
+            font-weight: 700;
         }
-
-        @media (max-width: 768px) {
-            .hamburger {
-                display: block;
-            }
-
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                background-color: #333;
-                position: absolute;
-                top: 60px;
-                left: 0;
-                width: 100%;
-                padding: 10px;
-            }
-
-            .nav-links.show {
-                display: flex;
-            }
+        
+        .contact-button:hover {
+            background-color: darkorange;
         }
-    </style>
+    
+/* Responsive Design with Media Queries */
+@media (max-width: 1024px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .service-box {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: 60vh;
+    }
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+    .service-box {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+</style>
 </head>
 <body>
-
-<div class="navbar">
-    <h1 class="logo">Messiah Ventures</h1>
-    <button class="hamburger" onclick="toggleMenu()">☰</button>
-    <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="crypto.html">Crypto</a></li>
-        <li><a href="contact.html" class="contact-button">Contact</a></li>
-    </ul>
-</div>
-
-<div class="about-container">
-    <h1>About Messiah Ventures</h1>
-    <div class="about-section">
-        <h2>Who We Are</h2>
-        <p>Messiah Ventures is a forward-thinking business and investment portfolio company dedicated to empowering individuals and businesses to achieve their financial goals. With a focus on innovation, professionalism, and integrity, we aim to build a legacy of excellence and trust.</p>
+    <div class="navbar">
+        <h1>Messiah Ventures</h1>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="crypto.html">crypto</a></li>
+            <li><a href="contact.html" class="contact-button">Contact</a></li>
+        </ul>
     </div>
-    <div class="about-section">
-        <h2>Our Mission</h2>
-        <p>To create sustainable value for our clients, partners, and stakeholders through innovative solutions, strategic investments, and a commitment to excellence.</p>
-    </div>
-    <div class="about-section">
-        <h2>Our Vision</h2>
-        <p>To be a global leader in business and investment services, shaping the future of entrepreneurship and financial freedom.</p>
-    </div>
-    <div class="about-section">
-        <h2>Our Values</h2>
-        <div class="about-values">
-            <div class="value-box">
-                <h3>Innovation</h3>
-                <p>We embrace creativity and forward-thinking to deliver cutting-edge solutions.</p>
-            </div>
-            <div class="value-box">
-                <h3>Integrity</h3>
-                <p>We operate with transparency, honesty, and accountability in all our endeavors.</p>
-            </div>
-            <div class="value-box">
-                <h3>Excellence</h3>
-                <p>We strive for the highest standards of professionalism and quality in everything we do.</p>
+    <div class="about-container">
+        <h1>About Messiah Ventures</h1>
+        <div class="about-section">
+            <h2>Who We Are</h2>
+            <p>Messiah Ventures is small business startup, to host a range of business ventures all in one place.</p>
+        </div>
+        <div class="about-section">
+            <h2>Our Mission</h2>
+            <p>Messiah ventures operates with multiple missions: To deliver trade services, building trust through quality workmanship and reliable solutions. while also strategically holding and actively managing investments for growth and long-term success.  </p>
+        </div>
+        <div class="about-section">
+            <h2>Our Vision</h2>
+            <p>To be recognized as a trusted and reputable leader in the trade services sector, leveraging our strong foundation to secure future opportunities for development, both in the quality of our services and the strategic growth of our investments.</p>
+        </div>
+        <div class="about-section">
+            <h2>Our Values</h2>
+            <div class="about-values">
+                <div class="value-box">
+                    <h3>Innovation</h3>
+                    <p>We embrace creativity and forward-thinking to deliver efficient solutions.</p>
+                </div>
+                <div class="value-box">
+                    <h3>Integrity</h3>
+                    <p>We operate with transparency, honesty, and accountability in all our endeavors.</p>
+                </div>
+                <div class="value-box">
+                    <h3>Excellence</h3>
+                    <p>We strive for the highest standards of professionalism and quality in everything we do.</p>
+                </div>
             </div>
         </div>
     </div>
-</div>
-
-<script>
-    function toggleMenu() {
-        const navLinks = document.querySelector('.nav-links');
-        navLinks.classList.toggle('show');
-    }
-
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-            const navLinks = document.querySelector('.nav-links');
-            navLinks.classList.remove('show');
-        });
-    });
-</script>
-
 </body>
 </html>
