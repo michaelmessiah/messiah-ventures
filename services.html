@@ -32,14 +32,9 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 20px;
+            padding: 20px 50px;
             background-color: #333;
             color: white;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
         }
 
         .nav-links {
@@ -62,16 +57,7 @@
 
         .nav-links a:hover {
             background-color: rgba(255, 255, 255, 0.2);
-        }
-
-        .contact-button {
-            background-color: orange;
-            color: black;
-            font-weight: 700;
-        }
-
-        .contact-button:hover {
-            background-color: darkorange;
+            color: white;
         }
 
         /* Services Section */
@@ -129,98 +115,94 @@
         .service-box a:hover {
             color: darkorange;
         }
-
-        /* Hamburger Menu */
-        .hamburger {
-            display: none;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
+        .contact-button {
+            background-color: orange;
+            color: black;
+            font-weight: 700;
         }
-
-        @media (max-width: 768px) {
-            .hamburger {
-                display: block;
-            }
-
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                gap: 10px;
-                background-color: #333;
-                position: absolute;
-                top: 60px;
-                left: 0;
-                width: 100%;
-                padding: 10px;
-            }
-
-            .nav-links.show {
-                display: flex;
-            }
+        
+        .contact-button:hover {
+            background-color: darkorange;
         }
-    </style>
+        
+    
+/* Responsive Design with Media Queries */
+@media (max-width: 1024px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .service-box {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: 60vh;
+    }
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+    .service-box {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+</style>
 </head>
 <body>
-
-<div class="navbar">
-    <h1 class="logo">Messiah Ventures</h1>
-    <button class="hamburger" onclick="toggleMenu()">☰</button>
-    <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="crypto.html">Crypto</a></li>
-        <li><a href="contact.html" class="contact-button">Contact</a></li>
-    </ul>
-</div>
-
-<div class="services-container">
-    <h1>Our Services</h1>
-    <div class="services-list">
-        <div class="service-box">
-            <h3>Business Consulting</h3>
-            <p>We provide expert advice to help businesses grow, optimize operations, and reach their full potential.</p>
-            <a href="contact.html">Learn More</a>
-        </div>
-        <div class="service-box">
-            <h3>Investment Portfolio Management</h3>
-            <p>Our team specializes in managing diversified investment portfolios to maximize returns and minimize risks.</p>
-            <a href="contact.html">Learn More</a>
-        </div>
-        <div class="service-box">
-            <h3>Cryptocurrency Advisory</h3>
-            <p>Stay ahead in the world of cryptocurrency with our expert guidance and market insights.</p>
-            <a href="crypto.html">Learn More</a>
-        </div>
-        <div class="service-box">
-            <h3>Digital Marketing</h3>
-            <p>We help businesses enhance their online presence and connect with their audience through tailored strategies.</p>
-            <a href="contact.html">Learn More</a>
-        </div>
-        <div class="service-box">
-            <h3>Startup Support</h3>
-            <p>From ideation to launch, we support startups at every stage of their journey with tools and resources.</p>
-            <a href="contact.html">Learn More</a>
+    <div class="navbar">
+        <h1>Messiah Ventures</h1>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="crypto.html">crypto</a></li>
+            <li><a href="contact.html" class="contact-button">Contact</a></li>
+        </ul>
+    </div>
+    <div class="services-container">
+        <h1>Our Services</h1>
+        <h1>THIS PAGE IS UNDER DEVELOPMENT</h1>
+        <h3>THE information PROVIDED BELOW MAY NOT BE ACCURATE</h3>
+        <div class="services-list">
+            <div class="service-box">
+                <h3>Business Consulting</h3>
+                <p>We provide expert advice to help businesses grow, optimize operations, and reach their full potential.</p>
+                <a href="contact.html">Learn More</a>
+            </div>
+            <div class="service-box">
+                <h3>Investment Portfolio Management</h3>
+                <p>Our team specializes in managing diversified investment portfolios to maximize returns and minimize risks.</p>
+                <a href="contact.html">Learn More</a>
+            </div>
+            <div class="service-box">
+                <h3>Cryptocurrency Advisory</h3>
+                <p>Stay ahead in the world of cryptocurrency with our expert guidance and market insights.</p>
+                <a href="crypto.html">Learn More</a>
+            </div>
+            <div class="service-box">
+                <h3>Digital Marketing</h3>
+                <p>We help businesses enhance their online presence and connect with their audience through tailored strategies.</p>
+                <a href="contact.html">Learn More</a>
+            </div>
+            <div class="service-box">
+                <h3>Startup Support</h3>
+                <p>From ideation to launch, we support startups at every stage of their journey with tools and resources.</p>
+                <a href="contact.html">Learn More</a>
+            </div>
         </div>
     </div>
-</div>
-
-<script>
-    function toggleMenu() {
-        const navLinks = document.querySelector('.nav-links');
-        navLinks.classList.toggle('show');
-    }
-
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-            const navLinks = document.querySelector('.nav-links');
-            navLinks.classList.remove('show');
-        });
-    });
-</script>
-
 </body>
 </html>
