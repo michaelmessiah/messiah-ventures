@@ -33,11 +33,6 @@
             color: white;
         }
 
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-        }
-
         .nav-links {
             list-style: none;
             display: flex;
@@ -100,71 +95,70 @@
         .contact-details a:hover {
             color: darkorange;
         }
-
-        /* Hamburger Button */
-        .hamburger {
-            display: none;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
+        .contact-button {
+            background-color: orange;
+            color: black;
+            font-weight: 700;
         }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                background-color: #333;
-                position: absolute;
-                top: 60px;
-                left: 0;
-                width: 100%;
-                padding: 10px;
-            }
-
-            .nav-links.show {
-                display: flex;
-            }
-
-            .hamburger {
-                display: block;
-            }
+        
+        .contact-button:hover {
+            background-color: darkorange;
         }
-    </style>
+    
+/* Responsive Design with Media Queries */
+@media (max-width: 1024px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .service-box {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: 60vh;
+    }
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+    .service-box {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+</style>
 </head>
 <body>
     <div class="navbar">
-        <h1 class="logo">Messiah Ventures</h1>
-        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <h1>Messiah Ventures</h1>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="services.html">Services</a></li>
-            <li><a href="crypto.html">Crypto</a></li>
+            <li><a href="crypto.html">crypto</a></li>
             <li><a href="contact.html" class="contact-button">Contact</a></li>
         </ul>
     </div>
     <div class="contact-container">
         <h1>Contact Us</h1>
-        <div class="contact-details">
-            <strong>Email:</strong> <a href="mailto:messiahventures.uk@gmail.com">messiahventures.uk@gmail.com</a><br>
-            <strong>X:</strong> <a href="https://x.com/mic_mes18" target="_blank">@mic_mes18</a>
-        </div>
+        <p class="contact-details">
+            <p class="contact-details">
+                <strong>Email:</strong> <a href="mailto:messiahventures.uk@gmail.com">messiahventures.uk@gmail.com</a><br>
+                <strong>X:</strong> <a href="https://x.com/messiah_venture" target="_blank">@messiah_venture</a><br>
+            </p>
+        </p>
     </div>
-
-    <script>
-        function toggleMenu() {
-            const navLinks = document.querySelector('.nav-links');
-            navLinks.classList.toggle('show');
-        }
-
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                const navLinks = document.querySelector('.nav-links');
-                navLinks.classList.remove('show');
-            });
-        });
-    </script>
 </body>
 </html>
