@@ -159,55 +159,62 @@
             }
         }
 
-
+<style>
   /* Basic styling for the hero section */
   #hero {
-    text-align: center; /* Center the text content */
-    padding: 100px 20px; /* Add some padding around the content */
+    display: flex; /* Enable flexbox for vertical centering */
+    flex-direction: column; /* Arrange items vertically */
+    justify-content: center; /* Vertically center items */
+    text-align: center; /* Center text horizontally */
+    min-height: 500px; /* Ensure the hero section has a minimum height */
+    padding: 20px; /* Basic padding */
   }
 
   #hero h2 {
-    font-size: 2.5em; /* Adjust as needed */
+    font-size: 2.5em;
     margin-bottom: 20px;
   }
 
   #hero p {
-    font-size: 1.1em; /* Adjust as needed */
-    line-height: 1.6; /* Improve readability */
-    margin: 0 auto 30px auto; /* Center the paragraph and add bottom margin */
-    max-width: 600px; /* Prevent the text from stretching too wide on large screens */
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin: 0 auto 30px auto;
+    max-width: 600px;
   }
 
   #hero .button {
-    display: inline-block; /* Allows for padding and margins */
+    display: inline-block;
     padding: 15px 30px;
-    background-color: #007bff; /* Example button color */
+    background-color: #007bff;
     color: white;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
   }
 
-  /* Mobile-specific adjustments using a media query */
+  /* Mobile-specific adjustments */
   @media (max-width: 768px) {
     #hero {
-      padding: 80px 15px; /* Slightly reduce padding on mobile */
+      min-height: auto; /* Allow height to adjust based on content */
+      padding: 80px 15px; /* Adjust padding for mobile */
     }
 
     #hero h2 {
-      font-size: 2em; /* Adjust font size for mobile */
+      font-size: 2em;
     }
 
     #hero p {
-      font-size: 1em; /* Adjust font size for mobile */
-      max-width: 95%; /* Allow the paragraph to take up more width on smaller screens */
+      font-size: 1em;
+      max-width: 95%;
     }
 
     #hero .button {
-      padding: 12px 25px; /* Adjust button padding for mobile */
+      padding: 12px 25px;
       font-size: 0.9em;
     }
   }
+</style>
+  
     </style>
 </head>
 
