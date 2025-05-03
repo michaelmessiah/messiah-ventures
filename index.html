@@ -1,57 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" href="messiah_ventures_favicon.ico" type="image/png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Messiah Ventures</title>
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        /* General Styles */
+    <style>/* General Styles */
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
             color: #333;
-            line-height: 1.6; /* Improve overall text readability */
         }
-
+        
         h1, h2, p {
             margin: 0;
         }
-
+        
         a {
             text-decoration: none;
             color: inherit;
         }
-
+        
         /* Navbar */
         .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 20px;
+            padding: 20px 50px;
             background-color: #333;
             color: white;
-            position: relative;
-            z-index: 10;
         }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-        }
-
+        
         .nav-links {
             list-style: none;
             display: flex;
             gap: 20px;
         }
-
+        
         .nav-links li {
             margin: 0;
         }
-
+        
         .nav-links a {
             color: white;
             font-weight: 600;
@@ -59,35 +50,33 @@
             border-radius: 5px;
             transition: background-color 0.3s;
         }
-
+        
         .nav-links a:hover {
             background-color: rgba(255, 255, 255, 0.2);
         }
-
+        
         .contact-button {
             background-color: orange;
             color: black;
             font-weight: 700;
         }
-
+        
         .contact-button:hover {
             background-color: darkorange;
         }
-
+        
         /* Hero Section */
         .hero {
             position: relative;
             background: url('hero-bg.jpg') no-repeat center center/cover;
             height: 100vh;
-            display: flex; /* Enable flexbox for vertical centering */
-            flex-direction: column; /* Arrange items vertically */
-            justify-content: center; /* Vertically center items */
-            text-align: center; /* Center text horizontally */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
             color: white;
-            padding: 20px;
-            min-height: 400px; /* Adjust minimum height as needed */
         }
-
+        
         .hero-overlay {
             background: rgba(0, 0, 0, 0.5);
             position: absolute;
@@ -96,27 +85,23 @@
             width: 100%;
             height: 100%;
         }
-
+        
         .hero-content {
             z-index: 1;
             position: relative;
-            max-width: 800px; /* Limit width of content for better readability on large screens */
-            margin: 0 auto; /* Center the content block */
         }
-
+        
         .hero-content h1 {
             font-size: 3rem;
             font-weight: 700;
             margin-bottom: 20px;
-            line-height: 1.2; /* Improve line height for the main heading */
         }
-
+        
         .hero-content p {
             font-size: 1.5rem;
             margin-bottom: 30px;
-            line-height: 1.4; /* Improve line height for the paragraph */
         }
-
+        
         .btn {
             display: inline-block;
             padding: 15px 30px;
@@ -126,110 +111,71 @@
             border-radius: 5px;
             transition: background 0.3s;
         }
-
+        
         .btn:hover {
             background: darkorange;
         }
+        
+        
+        
+/* Responsive Design with Media Queries */
+@media (max-width: 1024px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .service-box {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
 
-        /* Hamburger Menu */
-        .hamburger {
-            display: none;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
-            z-index: 11;
-        }
+@media (max-width: 768px) {
+    .hero {
+        height: 60vh;
+    }
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+    .service-box {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
 
-        /* Mobile Styles */
-        @media (max-width: 768px) {
-            .hamburger {
-                display: block;
-            }
-
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                gap: 10px;
-                background-color: #333;
-                position: absolute;
-                top: 60px;
-                left: 0;
-                width: 100%;
-                padding: 10px 20px; /* Add horizontal padding for better spacing */
-                z-index: 10; /* Ensure it stays above other content */
-                align-items: center; /* Center links on mobile */
-            }
-
-            .nav-links.show {
-                display: flex;
-            }
-
-            .hero {
-                min-height: auto; /* Adjust height based on content */
-                padding: 80px 20px; /* Adjust padding for mobile */
-                align-items: center; /* Center content vertically */
-                text-align: center; /* Ensure text is centered on mobile too */
-                height: auto;
-            }
-
-            .hero-content {
-                max-width: 95%; /* Allow content to take up more width on mobile */
-            }
-
-            .hero-content h1 {
-                font-size: 2.2rem; /* Slightly smaller heading for mobile */
-                margin-bottom: 10px;
-            }
-
-            .hero-content p {
-                font-size: 1.2rem; /* Slightly smaller paragraph for mobile */
-                margin-bottom: 20px;
-            }
-
-            .btn {
-                padding: 12px 25px;
-                font-size: 1rem;
-            }
-        }
-    </style>
+</style>
 </head>
-<body>
-    <div class="navbar">
-        <h1 class="logo">Messiah Ventures</h1>
-        <button class="hamburger" onclick="toggleMenu()">☰</button>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="crypto.html">Crypto</a></li>
-            <li><a href="contact.html" class="contact-button">Contact</a></li>
-        </ul>
-    </div>
 
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">MESSIAH VENTURES</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="crypto.html">crypto</a></li>
+                <li><a href="contact.html" class="contact-button">Contact</a></li>
+
+            </ul>
+        </nav>
+    </header>
     <section id="home" class="hero">
         <div class="hero-overlay">
             <div class="hero-content">
                 <h1>Messiah Ventures</h1>
                 <p>Showcasing Business & Investment Portfolio</p>
-                <a href="services.html" class="btn">View Services</a>
+                <a href="#services" class="btn">View Services</a>
             </div>
         </div>
     </section>
-
-    <script>
-        function toggleMenu() {
-            const navLinks = document.querySelector('.nav-links');
-            navLinks.classList.toggle('show');
-        }
-
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                const navLinks = document.querySelector('.nav-links');
-                navLinks.classList.remove('show');
-            });
-        });
-    </script>
 </body>
 </html>
